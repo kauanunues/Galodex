@@ -1,0 +1,11 @@
+COnfigurações da conta local do GIT:
+git config --global user.name kauannunes
+git config --global user.email marykakinho@gmail.com
+
+Criar um projeto AspNet MVC
+dotnet new mvc -o Galodex
+
+Executar o projeto
+dotnet run
+dotnet watch run
+
