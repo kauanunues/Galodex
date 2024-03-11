@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Pokemon>
+@{    
     ViewData["Title"] = "Home";
 }
         <section class="pt-5 pb-3 text-center container">
@@ -51,11 +52,11 @@
 
         <div class="album py-5 bg-light">
             <div class="container">
-
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
-
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
+        @foreach (var pokemon in Model)            
+        {
+                    <div class="col"> 
+                    
                         <div class="card shadow-sm cursor-pointer planta venenoso" onclick="GetInfo(001)">
                             <img src="img/pokemons/001.png" class="card-img-top" width="100%" height="300"
                                 alt="Bulbasaur" />
@@ -72,9 +73,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    <!-- Card Pokemon - Inicio -->
+        }        
                     <div class="col">
                         <div class="card shadow-sm cursor-pointer planta venenoso" onclick="GetInfo(002)">
                             <img src="img/pokemons/002.png" class="card-img-top" width="100%" height="300"
@@ -93,7 +92,6 @@
                         </div>
                     </div>
                     <!-- Card Pokemon - Fim -->
-
                     <!-- Card Pokemon - Inicio -->
                     <div class="col">
                         <div class="card shadow-sm cursor-pointer planta venenoso" onclick="GetInfo(003)">
@@ -113,7 +111,6 @@
                         </div>
                     </div>
                     <!-- Card Pokemon - Fim -->
-
                     <!-- Card Pokemon - Inicio -->
                     <div class="col">
                         <div class="card shadow-sm cursor-pointer fogo" onclick="GetInfo(004)">
@@ -131,7 +128,6 @@
                         </div>
                     </div>
                     <!-- Card Pokemon - Fim -->
-
                     <!-- Card Pokemon - Inicio -->
                     <div class="col">
                         <div class="card shadow-sm cursor-pointer fogo" onclick="GetInfo(005)">
@@ -149,7 +145,6 @@
                         </div>
                     </div>
                     <!-- Card Pokemon - Fim -->
-
                     <!-- Card Pokemon - Inicio -->
                     <div class="col">
                         <div class="card shadow-sm cursor-pointer fogo voador" onclick="GetInfo(006)">
@@ -168,7 +163,6 @@
                         </div>
                     </div>
                     <!-- Card Pokemon - Fim -->
-
                     <!-- Card Pokemon - Inicio -->
                     <div class="col">
                         <div class="card shadow-sm cursor-pointer água" onclick="GetInfo(007)">
@@ -186,7 +180,6 @@
                         </div>
                     </div>
                     <!-- Card Pokemon - Fim -->
-
                     <!-- Card Pokemon - Inicio -->
                     <div class="col">
                         <div class="card shadow-sm cursor-pointer água" onclick="GetInfo(8)">
@@ -204,7 +197,6 @@
                         </div>
                     </div>
                     <!-- Card Pokemon - Fim -->
-
                     <!-- Card Pokemon - Inicio -->
                     <div class="col">
                         <div class="card shadow-sm cursor-pointer água" onclick="GetInfo(9)">
@@ -222,7 +214,6 @@
                         </div>
                     </div>
                     <!-- Card Pokemon - Fim -->
-
                     <!-- Card Pokemon - Inicio -->
                     <div class="col">
                         <div class="card shadow-sm cursor-pointer inseto" onclick="GetInfo(010)">
@@ -240,7 +231,6 @@
                         </div>
                     </div>
                     <!-- Card Pokemon - Fim -->
-
                     <!-- Card Pokemon - Inicio -->
                     <div class="col">
                         <div class="card shadow-sm cursor-pointer inseto" onclick="GetInfo(011)">
@@ -258,7 +248,6 @@
                         </div>
                     </div>
                     <!-- Card Pokemon - Fim -->
-
                     <!-- Card Pokemon - Inicio -->
                     <div class="col">
                         <div class="card shadow-sm cursor-pointer inseto voador" onclick="GetInfo(012)">
@@ -277,8 +266,6 @@
                         </div>
                     </div>
                     <!-- Card Pokemon - Fim -->
-
-
                     <div id="zeroPokemon" class="col-lg-12 text-center" hidden>
                         <h1 class="my-3 text-danger">Nenhum Pokemon Encontrado</h1>
                     </div>

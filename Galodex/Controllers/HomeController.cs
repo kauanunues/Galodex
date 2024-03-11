@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Galodex.Models;
+using System.Text.Json;
 
 namespace Galodex.Controllers;
 
@@ -15,7 +16,13 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+       List<Pokemon> pokemons = [];
+       using (StreamReader leitor = new("Data\\pokemons.json"))
+       {
+        string dados = leitor.ReadToEnd();
+        pokemons = JsonSerializer.Deserialize<List<Pokemon>>(dados);
+       }
+       return View(pokemons);
     }
 
     public IActionResult Privacy()

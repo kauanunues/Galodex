@@ -1,4 +1,4 @@
-namespace Pokemon.Models;
+namespace Galodex.Models;
 
 public class Pokemon
 {
